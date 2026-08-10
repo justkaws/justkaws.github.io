@@ -1,169 +1,86 @@
-const themeToggle =
-document.getElementById("themeToggle");
+// ============ Mobile nav ============
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
 
-if(localStorage.theme === "light"){
-
-    document.body.classList.add("light");
-    themeToggle.innerHTML = "☀️";
-
-}
-
-themeToggle.addEventListener("click",()=>{
-
-    document.body.classList.toggle("light");
-
-    const isLight =
-    document.body.classList.contains("light");
-
-    localStorage.theme =
-    isLight ? "light" : "dark";
-
-    themeToggle.innerHTML =
-    isLight ? "☀️" : "🌙";
-
+navToggle.addEventListener('click', () => {
+  const isOpen = mainNav.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+  navToggle.classList.toggle('is-open', isOpen);
 });
 
-const quotes = [
+mainNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
 
-"Somos nada mais do que a soma das nossas experiências.",
+// ============ Header scroll state ============
+const header = document.getElementById('siteHeader');
+const onScroll = () => {
+  header.classList.toggle('scrolled', window.scrollY > 12);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-"Deixe de querer ser rocha. Aceite ser rio.",
+// ============ Typewriter role text ============
+const roles = ['Cientista da Computação', 'Criador de conteúdo', 'Especialista em produto'];
+const typedEl = document.getElementById('typedRole');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-"Sem retorno. Assim como os vikings faziam, eu queimei o barco."
+if (typedEl) {
+  if (prefersReducedMotion) {
+    typedEl.textContent = roles[0];
+  } else {
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
 
-];
+    const tick = () => {
+      const current = roles[roleIndex];
 
-let quoteIndex = 0;
-
-setInterval(()=>{
-
-    quoteIndex =
-    (quoteIndex + 1) % quotes.length;
-
-    document.getElementById("quote")
-    .textContent =
-    quotes[quoteIndex];
-
-},4000);
-
-const counters =
-document.querySelectorAll(".counter");
-
-counters.forEach(counter=>{
-
-    const target =
-    +counter.dataset.target;
-
-    let count = 0;
-
-    const update = ()=>{
-
-        count += target / 100;
-
-        if(count < target){
-
-            counter.innerText =
-            Math.floor(count);
-
-            requestAnimationFrame(update);
-
-        }else{
-
-            counter.innerText =
-            target >= 1000
-            ? "5K+"
-            : target + "+";
-
+      if (!deleting) {
+        charIndex++;
+        typedEl.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(tick, 1500);
+          return;
         }
-
+      } else {
+        charIndex--;
+        typedEl.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+      setTimeout(tick, deleting ? 35 : 60);
     };
-
-    update();
-
-});
-
-const canvas =
-document.getElementById("matrix");
-
-const ctx =
-canvas.getContext("2d");
-
-function resize(){
-
-    canvas.width =
-    window.innerWidth;
-
-    canvas.height =
-    window.innerHeight;
-
+    tick();
+  }
 }
 
-resize();
-
-const chars =
-"01ABCDEFGHIJKLMNOPQRSTUVWXYZアイウエオ";
-
-const fontSize = 16;
-
-let columns =
-Math.floor(canvas.width/fontSize);
-
-let drops =
-Array(columns).fill(1);
-
-function draw(){
-
-    ctx.fillStyle =
-    "rgba(5,8,22,.08)";
-
-    ctx.fillRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-    ctx.fillStyle =
-    "#ff2b2b";
-
-    ctx.font =
-    fontSize + "px monospace";
-
-    for(let i=0;i<drops.length;i++){
-
-        const text =
-        chars[
-            Math.floor(
-                Math.random()
-                * chars.length
-            )
-        ];
-
-        ctx.fillText(
-            text,
-            i*fontSize,
-            drops[i]*fontSize
-        );
-
-        if(
-            drops[i]*fontSize >
-            canvas.height &&
-            Math.random() > .975
-        ){
-
-            drops[i] = 0;
-
-        }
-
-        drops[i]++;
-
-    }
-
-}
-
-setInterval(draw,35);
-
-window.addEventListener(
-"resize",
-resize
+// ============ Scroll reveal ============
+const revealTargets = document.querySelectorAll(
+  '.about-grid, .link-grid, .channel-card, .contact-inner, .section-title, .section-lede'
 );
+revealTargets.forEach(el => el.classList.add('reveal'));
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  revealTargets.forEach(el => observer.observe(el));
+} else {
+  revealTargets.forEach(el => el.classList.add('is-visible'));
+}
+
+// ============ Footer year ============
+document.getElementById('year').textContent = new Date().getFullYear();

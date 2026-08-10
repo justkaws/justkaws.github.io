@@ -3,262 +3,281 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Justkaws | Raymundo Junior</title>
-
-<meta name="description" content="Tecnologia, inovação e cultura digital. Conheça Raymundo Junior e a marca Justkaws.">
-
-<meta property="og:title" content="Justkaws">
-<meta property="og:description" content="Tecnologia, inovação e cultura digital.">
-<meta property="og:type" content="website">
-
+<title>Raymundo Junior — Cientista da Computação</title>
+<meta name="description" content="Raymundo Junior · Cientista da Computação, especialista em produtos digitais e criador dos canais Justkaws, Político para Q e Eu Sapiens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<canvas id="matrix"></canvas>
+<div class="noise-overlay" aria-hidden="true"></div>
 
-<header>
-
-    <div class="logo-container">
-        <img src="logo.png" alt="Justkaws" class="logo">
-    </div>
-
-    <nav id="navMenu">
-        <a href="#home">Início</a>
-        <a href="#stats">Estatísticas</a>
-        <a href="#profissional">Profissional</a>
-        <a href="#justkaws">Justkaws</a>
-        <a href="#contato">Contato</a>
+<!-- ===== NAV ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark"><img src="assets/logo.jpeg" alt="Logo Justkaws"></span>
+      <span class="brand-name">Just<b>kaws</b></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#sobre">Sobre</a>
+      <a href="#info">Informações</a>
+      <a href="#canais">Canais</a>
+      <a href="#contato" class="nav-cta">Contato</a>
     </nav>
-
-    <div class="header-actions">
-
-        <button id="themeToggle" class="icon-btn">
-            🌙
-        </button>
-
-        <button id="menuBtn" class="icon-btn mobile">
-            ☰
-        </button>
-
-    </div>
-
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
-<section id="home" class="hero">
-
-    <div class="hero-photo">
-
-        <img
-            src="foto.png"
-            alt="Raymundo Junior">
-
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-stripes" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-dot"></span>disponível para novos projetos</p>
+      <h1 class="hero-title">
+        Raymundo<br><span class="grad-text">Junior</span>
+      </h1>
+      <p class="hero-role"><span id="typedRole"></span><span class="cursor">_</span></p>
+      <p class="hero-desc">Mais de 20 anos transformando ideias em produtos e serviços de tecnologia — e traduzindo tudo isso em conteúdo, do código à cultura pop.</p>
+      <div class="hero-actions">
+        <a href="#canais" class="btn btn-primary">Ver os canais</a>
+        <a href="#contato" class="btn btn-ghost">Falar comigo</a>
+      </div>
     </div>
+    <div class="hero-photo-wrap">
+      <div class="eq-ring" aria-hidden="true">
+        <div class="eq-bars">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/foto.png" alt="Foto de Raymundo Junior">
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</section>
 
-    <div class="hero-content">
+<!-- ===== SOBRE ===== -->
+<section class="section" id="sobre">
+  <div class="wrap">
+    <p class="section-eyebrow">· Sobre mim</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Especialista em tecnologia,<br>produto e <span class="grad-text">inovação</span>.</h2>
+        <p>Especialista em Jogos Eletrônicos pela UEA e Cientista da Computação pela FUCAPI. Possui mais de 20 anos de experiência na criação de produtos e serviços informacionais, sempre no cruzamento entre tecnologia, negócio e pessoas.</p>
+        <p>Certificado por instituições como Harvard Business School, Microsoft, Scrum Alliance, LeanKanban e Adobe — trazendo essa bagagem para projetos, mentorias e para os canais que mantém no ar.</p>
+      </div>
+      <div class="about-side">
+        <div class="stat-block">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">anos de experiência</span>
+        </div>
+        <div class="cert-list">
+          <p class="cert-label">Certificações</p>
+          <ul>
+            <li>Harvard Business School</li>
+            <li>Microsoft</li>
+            <li>Scrum Alliance</li>
+            <li>LeanKanban</li>
+            <li>Adobe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <span class="tag">
-            TECNOLOGIA • INOVAÇÃO • CULTURA DIGITAL
+<!-- ===== INFORMAÇÕES ===== -->
+<section class="section section-alt" id="info">
+  <div class="wrap">
+    <p class="section-eyebrow">· Informações</p>
+    <h2 class="section-title">Onde me encontrar</h2>
+    <div class="link-grid">
+      <a class="link-card" href="https://www.linkedin.com/in/raymundojunior/" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.32v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.98c0-1.67-.03-3.81-2.32-3.81-2.33 0-2.69 1.82-2.69 3.7V23H8.5V8.25z"/></svg>
         </span>
-
-        <h2>Olá, eu sou</h2>
-
-        <h1>
-            RAYMUNDO JUNIOR
-        </h1>
-
-        <h3>vulgo JUSTKAWS</h3>
-
-        <p>
-
-            Profissional de tecnologia apaixonado por inovação,
-            novas tecnologias e automação.
-
-            Criador da marca Justkaws onde compartilho
-            conhecimento, ideias e reflexões sobre
-            o universo digital.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#profissional" class="btn">
-                Ver Perfil Profissional
-            </a>
-
-            <a href="#justkaws" class="btn-outline">
-                Conheça a Justkaws
-            </a>
-
-        </div>
-
+        <span class="link-body">
+          <span class="link-title">LinkedIn</span>
+          <span class="link-sub">in/raymundojunior</span>
+        </span>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a class="link-card" href="http://lattes.cnpq.br/3865194185989622" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 8-4.09V17h2V7L12 2zM6 12.18v4.68L12 20l6-3.14v-4.68l-6 3.05-6-3.05z"/></svg>
+        </span>
+        <span class="link-body">
+          <span class="link-title">Currículo Lattes</span>
+          <span class="link-sub">lattes.cnpq.br</span>
+        </span>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a class="link-card" href="https://github.com/justkaws" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.96.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </span>
+        <span class="link-body">
+          <span class="link-title">GitHub</span>
+          <span class="link-sub">@justkaws</span>
+        </span>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a class="link-card" href="mailto:justkaws@gmail.com">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1.4 2 8.6 6.45L20.6 6H3.4zM21 8.24l-8.4 6.3a1 1 0 0 1-1.2 0L3 8.24V18h18V8.24z"/></svg>
+        </span>
+        <span class="link-body">
+          <span class="link-title">E-mail</span>
+          <span class="link-sub">justkaws@gmail.com</span>
+        </span>
+        <span class="link-arrow">↗</span>
+      </a>
     </div>
-
+  </div>
 </section>
 
-<section id="stats">
+<!-- ===== CANAIS ===== -->
+<section class="section" id="canais">
+  <div class="wrap">
+    <p class="section-eyebrow">· Canais</p>
+    <h2 class="section-title">Três canais, <span class="grad-text">um só criador</span></h2>
+    <p class="section-lede">Do humor sobre cultura pop e tecnologia à política sem enrolação, passando por desenvolvimento pessoal — cada canal com sua própria frequência.</p>
 
-    <h2 class="section-title">
-        Estatísticas
-    </h2>
+    <div class="channel-grid">
 
-    <div class="stats-grid">
-
-        <div class="card stat-card">
-            <span class="counter" data-target="20">0</span>
-            <p>Anos de Experiência</p>
+      <article class="channel-card channel-jk">
+        <div class="channel-head">
+          <div class="channel-logo">
+            <img src="assets/logo.jpeg" alt="Justkaws">
+          </div>
+          <div>
+            <h3>Justkaws</h3>
+            <p>Canal sobre mim, cultura pop e tecnologia.</p>
+          </div>
         </div>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.tiktok.com/@justkaws_" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82c-.9-.99-1.35-2.24-1.35-3.82h-3.24v13.44c0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9 1.3-2.9 2.9-2.9c.28 0 .55.04.8.11V9.4a6.2 6.2 0 0 0-.8-.05A6.15 6.15 0 0 0 3 15.5a6.15 6.15 0 0 0 6.15 6.15 6.15 6.15 0 0 0 6.15-6.15V8.9a8.13 8.13 0 0 0 4.7 1.5V7.16a4.85 4.85 0 0 1-3.4-1.34z"/></svg>
+              <span>@justkaws_</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ju5tkaws_" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.23.06 1.27.07 1.64.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.23.41-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.05-.41-2.23-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.23-.41 1.27-.06 1.64-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-1.27.06-2.15.27-2.91.57a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.16C.32 4.92.11 5.8.05 7.07.01 8.35 0 8.76 0 12s.01 3.65.07 4.93c.06 1.27.27 2.15.57 2.91.31.79.72 1.46 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.51 2.91.57C8.33 23.99 8.74 24 12 24s3.65-.01 4.93-.07c1.27-.06 2.15-.27 2.91-.57a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.51-1.64.57-2.91.06-1.28.07-1.69.07-4.93s-.01-3.65-.07-4.93c-.06-1.27-.27-2.15-.57-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.84.64c-.76-.3-1.64-.51-2.91-.57C15.65.01 15.24 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+              <span>ju5tkaws_</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@ju5tkaws" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 3 12 3 12 3h-.01s-4.89 0-8.19.14c-.46.05-1.46.06-2.36 1C.73 4.86.5 6.5.5 6.5S.27 8.42.27 10.34v1.32c0 1.92.23 3.84.23 3.84s.23 1.64.94 2.36c.9.94 2.08.91 2.6 1.01C5.9 19 12 19.06 12 19.06s4.9-.01 8.2-.15c.46-.05 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.23-1.92.23-3.84v-1.32c0-1.92-.23-3.84-.23-3.84zM9.75 14.85V8.65l6 3.1z"/></svg>
+              <span>@ju5tkaws</span>
+            </a>
+          </li>
+        </ul>
+      </article>
 
-        <div class="card stat-card">
-            <span class="counter" data-target="50">0</span>
-            <p>Projetos Realizados</p>
+      <article class="channel-card channel-pq">
+        <div class="channel-head">
+          <div class="channel-logo">
+            <img src="assets/logo2.jpeg" alt="Político para Q">
+          </div>
+          <div>
+            <h3>Político para Q</h3>
+            <p>Canal para falar sobre política, com linguagem simples e direta.</p>
+          </div>
         </div>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.tiktok.com/@politico.paraq" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82c-.9-.99-1.35-2.24-1.35-3.82h-3.24v13.44c0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9 1.3-2.9 2.9-2.9c.28 0 .55.04.8.11V9.4a6.2 6.2 0 0 0-.8-.05A6.15 6.15 0 0 0 3 15.5a6.15 6.15 0 0 0 6.15 6.15 6.15 6.15 0 0 0 6.15-6.15V8.9a8.13 8.13 0 0 0 4.7 1.5V7.16a4.85 4.85 0 0 1-3.4-1.34z"/></svg>
+              <span>@politico.paraq</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/politicoparaq" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.23.06 1.27.07 1.64.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.23.41-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.05-.41-2.23-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.23-.41 1.27-.06 1.64-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-1.27.06-2.15.27-2.91.57a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.16C.32 4.92.11 5.8.05 7.07.01 8.35 0 8.76 0 12s.01 3.65.07 4.93c.06 1.27.27 2.15.57 2.91.31.79.72 1.46 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.51 2.91.57C8.33 23.99 8.74 24 12 24s3.65-.01 4.93-.07c1.27-.06 2.15-.27 2.91-.57a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.51-1.64.57-2.91.06-1.28.07-1.69.07-4.93s-.01-3.65-.07-4.93c-.06-1.27-.27-2.15-.57-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.84.64c-.76-.3-1.64-.51-2.91-.57C15.65.01 15.24 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+              <span>politicoparaq</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@politicoparaq" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 3 12 3 12 3h-.01s-4.89 0-8.19.14c-.46.05-1.46.06-2.36 1C.73 4.86.5 6.5.5 6.5S.27 8.42.27 10.34v1.32c0 1.92.23 3.84.23 3.84s.23 1.64.94 2.36c.9.94 2.08.91 2.6 1.01C5.9 19 12 19.06 12 19.06s4.9-.01 8.2-.15c.46-.05 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.23-1.92.23-3.84v-1.32c0-1.92-.23-3.84-.23-3.84zM9.75 14.85V8.65l6 3.1z"/></svg>
+              <span>@politicoparaq</span>
+            </a>
+          </li>
+        </ul>
+      </article>
 
-        <div class="card stat-card">
-            <span class="counter" data-target="10">0</span>
-            <p>Certificações</p>
+      <article class="channel-card channel-es">
+        <div class="channel-head">
+          <div class="channel-logo">
+            <img src="assets/logo3.jpeg" alt="Eu Sapiens">
+          </div>
+          <div>
+            <h3>Eu Sapiens</h3>
+            <p>Canal focado em desenvolvimento pessoal.</p>
+          </div>
         </div>
-
-        <div class="card stat-card">
-            <span class="counter" data-target="5000">0</span>
-            <p>Pessoas Impactadas</p>
-        </div>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.tiktok.com/@eu.sapiens" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82c-.9-.99-1.35-2.24-1.35-3.82h-3.24v13.44c0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9 1.3-2.9 2.9-2.9c.28 0 .55.04.8.11V9.4a6.2 6.2 0 0 0-.8-.05A6.15 6.15 0 0 0 3 15.5a6.15 6.15 0 0 0 6.15 6.15 6.15 6.15 0 0 0 6.15-6.15V8.9a8.13 8.13 0 0 0 4.7 1.5V7.16a4.85 4.85 0 0 1-3.4-1.34z"/></svg>
+              <span>@eu.sapiens</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/euhsapiens" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.23.06 1.27.07 1.64.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.23.41-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.05-.41-2.23-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.23-.41 1.27-.06 1.64-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-1.27.06-2.15.27-2.91.57a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.16C.32 4.92.11 5.8.05 7.07.01 8.35 0 8.76 0 12s.01 3.65.07 4.93c.06 1.27.27 2.15.57 2.91.31.79.72 1.46 1.39 2.13a5.9 5.9 0 0 0 2.13 1.39c.76.3 1.64.51 2.91.57C8.33 23.99 8.74 24 12 24s3.65-.01 4.93-.07c1.27-.06 2.15-.27 2.91-.57a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.51-1.64.57-2.91.06-1.28.07-1.69.07-4.93s-.01-3.65-.07-4.93c-.06-1.27-.27-2.15-.57-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.84.64c-.76-.3-1.64-.51-2.91-.57C15.65.01 15.24 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+              <span>euhsapiens</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@eu.sapiens" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 3 12 3 12 3h-.01s-4.89 0-8.19.14c-.46.05-1.46.06-2.36 1C.73 4.86.5 6.5.5 6.5S.27 8.42.27 10.34v1.32c0 1.92.23 3.84.23 3.84s.23 1.64.94 2.36c.9.94 2.08.91 2.6 1.01C5.9 19 12 19.06 12 19.06s4.9-.01 8.2-.15c.46-.05 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.23-1.92.23-3.84v-1.32c0-1.92-.23-3.84-.23-3.84zM9.75 14.85V8.65l6 3.1z"/></svg>
+              <span>@eu.sapiens</span>
+            </a>
+          </li>
+        </ul>
+      </article>
 
     </div>
-
+  </div>
 </section>
 
-<section id="profissional">
-
-    <h2 class="section-title">
-        Perfil Profissional
-    </h2>
-
-    <div class="card">
-
-        <h3>
-            Transformando tecnologia em soluções
-        </h3>
-
-        <p>
-
-            Profissional com mais de 20 anos de experiência
-            em infraestrutura, cloud computing, automação,
-            redes e transformação digital.
-
-        </p>
-
-        <div class="social-links">
-
-            <a target="_blank"
-               href="https://www.linkedin.com/in/raymundojunior">
-
-               LinkedIn
-
-            </a>
-
-            <a target="_blank"
-               href="https://www.instagram.com/ju5tkaws">
-
-               Instagram
-
-            </a>
-
-        </div>
-
-        <p>
-            📧 raymundojunior@gmail.com
-        </p>
-
-    </div>
-
+<!-- ===== CONTATO ===== -->
+<section class="section contact" id="contato">
+  <div class="hero-stripes hero-stripes--footer" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="wrap contact-inner">
+    <p class="section-eyebrow">· Contato</p>
+    <h2 class="section-title">Vamos conversar?</h2>
+    <p class="section-lede">Projetos, parcerias ou só bater um papo sobre tecnologia — me manda um e-mail.</p>
+    <a class="email-btn" href="mailto:justkaws@gmail.com">
+      justkaws@gmail.com
+      <span class="email-btn-icon">→</span>
+    </a>
+  </div>
 </section>
 
-<section id="justkaws">
-
-    <h2 class="section-title">
-        Justkaws
-    </h2>
-
-    <div class="card">
-
-        <h3>
-            Tecnologia, Criatividade e Cultura Digital
-        </h3>
-
-        <p>
-
-            A Justkaws nasceu da paixão por tecnologia,
-            inovação e cultura digital.
-
-            Um espaço para compartilhar conhecimento,
-            experiências, reflexões e aprendizado contínuo.
-
-        </p>
-
-        <div class="social-links">
-
-            <a target="_blank"
-               href="https://www.tiktok.com/@justkaws_">
-
-               TikTok
-
-            </a>
-
-                        <a target="_blank"
-               href="https://www.youtube.com/@ju5tkaws">
-
-               YouTube
-
-            </a>
-
-            <a target="_blank"
-               href="https://www.instagram.com/ju5tkaws_">
-
-               Instagram
-
-            </a>
-
-        </div>
-
-        <p>
-            📧 justkaws@gmail.com
-        </p>
-
-    </div>
-
-</section>
-
-<section class="manifesto">
-
-    <div class="card">
-
-        <h2 id="quote">
-
-            Somos nada mais do que a soma das nossas experiências.
-
-        </h2>
-
-    </div>
-
-</section>
-
-<footer>
-
-    <img src="logo.png"
-         alt="Justkaws">
-
-    <p>
-        © 2026 Justkaws
-    </p>
-
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Justkaws</span>
+    <span class="footer-sep">·</span>
+    <span>Cientista da Computação</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
